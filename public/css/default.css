@@ -1,192 +1,92 @@
-body{
-    background: silver;
-    font-family: sans-serif,serif;  
+textarea{
+	resize: vertical;
+}
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+.bs-docs-example {
+	position: relative;
+	margin: 15px 0;
+	padding: 39px 19px 14px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
 }
 
-#container{
-    margin: auto;
-    width: 900px;
+.bs-docs-example > .descriptionForm {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	color: #9da0a4;
+	border-radius: 4px 0 4px 0;
 }
-#header{
-    padding: 20px;
-    background: blue;
-    margin-bottom: 10px;
-
-
+.panel1{
+	margin-top: 10px !important;
 }
-
-#content{
-    margin: auto;
-
+.panel1 > .btn{
+	height: 120px;
+	box-shadow: 0 0 7px #666666;
+	overflow: hidden;
+	border-radius: 20px 0 20px 0;
 }
-
-#content-main{
-    color: #000000;
-    padding: 20px;
-    background: #fff;
-    margin-bottom: 10px;
-
-
+.panel1 > .btn > .btntext{
+	transition-duration: 1s;
+	transition-property: all;
+	font-size: 35px !important;
 }
-
-#footer{
-    padding: 20px;
-    background: green;
-
-
+.panel1 > .btn:hover > .btntext{
+	font-size: 40px !important;
 }
 
-.bordes{
-    /*OTROS ESTILOS*/
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
-    -moz-box-shadow: 0px 0px 11px #000000;
-    -webkit-box-shadow: 0px 0px 11px #000000;
-    box-shadow: 0px 0px 11px #000000;
-    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#0000ff', endColorstr = 'transparent');
-    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-    -ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#0000ff', endColorstr = 'transparent')";
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    /*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
-    /*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
-    opacity: 0.7;
-    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 70);
-    /*-ms-filter must come before filter*/
-    filter: alpha(opacity = 70);
-    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-    /*All filters must be placed together*/
+.panel1 > .btn > i {
+	font-size: 40px;
+	margin: 0px;
+	padding: 0px;
 }
-a.enlace{
-    color:#fff;
-    text-decoration: none;
-    background-color: #215CFC;
-    border: 1px solid #215CFC;
-}
-a.enlace:hover {
-    color:yellow;
-    background-color: #333333;
+.panel1 > .btn > h3 {
+	font-size: 25px;
+	margin: 0px;
+	padding: 0px;
 }
 
-a.enlace-lista{
-    color:#fff;
-    text-decoration: none;
-
+ul {
+	list-style-type: none;
 }
-a.enlace-lista img{
-    border: 0px;
+.ajaxLoader{
+	padding: 5px;
 }
-/*a.enlace-lista:hover {
-   background-color: #333333;
-   color: yellow;
-} */
-
-/*NAVBAR*/
-
-#navbar ul{
-    list-style-type: none;
+.ajaxLoader .hidden{
+	display: inline !important;
 }
-#navbar li{
-    display: inline;
-    text-align: center;
-    margin: 0 5px 0 0;
+.btn-group > .btn:first-child{
+	border-radius: 10px 0 0 0;
 }
-#navbar li a {
-    padding: 2px 7px 2px 7px;
-    color: #ffffff;
-    background-color: #215CFC;
-    border: 1px solid #215CFC;
-    text-decoration: none;
+.btn-group > .btn:last-child, .btn-group > .dropdown-toggle{
+	border-radius: 0 0 10px 0;
 }
-#navbar li a:hover{
-    background-color: #333333;
-    color: yellow;
+.dropdown-menu{
+	border-radius: 0 10px 0 10px;
+	overflow: hidden;
 }
-
-
-/* FORMULARIO LOGIN*/
-.formulario div{
-    margin: .4em 0;
-
+#formLogin .descriptionForm{
+	color: #FFFFFF;
+	font-size: 16px;
+	background-image: linear-gradient(to bottom, #FBB450, #F89406);
+	padding: 8px;
+	border-color: #FBB450;
+	box-shadow: 1px 1px 3px #999999;
 }
-
-.formulario div label{
-    width: 15%;
-    float: left;
-
+#formLogin .bs-docs-example{
+	border-color: #FBB450;
+	background-color: #F5F5F5;
+	box-shadow: 0px 0px 3px #999999;
 }
-.formulario label{
-    display:block;
-    font-family:arial,sans-serif;
-    font-size:18px;
-    padding:10px 0 3px;
-    width:200px;
-}
-
-.formulario input.texto{
-
-    color:#666666;
-    font-size:14px;
-    height:20px;
-    padding: 5px;
-    width:200px;
-    font-family:arial,sans-serif;
-}
-
-.formulario input.boton-enviar{  
-    color:#666666;
-    display:block;
-    font-family:arial,sans-serif;
-    height:30px;
-    text-align:center;
-    width:110px;
-}
-
-.formulario option{
-    color:#666666;
-    font-size:12px;
-    height:20px;
-    padding: 5px;
-    width:200px;
-    font-family:arial,sans-serif;
-}
-
-/* ESTILO TABLAS */
-
-.tabla {
-    border-spacing:5px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid #215CFC;
-    margin-left: auto ;
-    margin-right: auto;
-    /*background-color: #666666;*/
-
-}
-
-.tabla th{
-    background-color: #215CFC;
-    color:#fff;
-}
-
-.tabla tr{
-    border: 2px solid #215CFC;
-
-}
-
-.tabla tr:hover{
-    background-color: #215CFC;
-    color:#fff;
-}
-.alarna{
-background-color: #008EE8;
+#formLogin {
+	text-shadow: 1px 1px 3px #666666;
 }
