@@ -5,14 +5,14 @@
             <meta http-equiv="X-UA-Compatible" content="IE=7">
 
                 <title>M & R Valle Hondo</title>
-                <style type="text/css" media="all">
+                <!--<style type="text/css" media="all">
                     @import url("<?php echo URL; ?>public/css/style.css");
                     @import url("<?php echo URL; ?>public/css/jquery.wysiwyg.css");
                     @import url("<?php echo URL; ?>public/css/facebox.css");
                     @import url("<?php echo URL; ?>public/css/visualize.css");
                     @import url("<?php echo URL; ?>public/css/date_input.css");
                     @import url("<?php echo URL; ?>public/jquery-ui/css/smoothness/jquery-ui-1.8.20.custom.css");
-                </style>
+                </style>-->
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.img.preload.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.filestyle.mini.js"></script>
