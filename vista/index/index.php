@@ -42,9 +42,9 @@
             <h3>Categorias</h3>
         </a>
 
-        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>categoria" data-content="">
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>muestra" data-content="">
             <i class="icon-list-ol icon-4x"></i>
-            <h3>Categorias</h3>
+            <h3>Modelo</h3>
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>cliente" data-content="">

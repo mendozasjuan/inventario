@@ -95,17 +95,17 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-hdd "></i> Datos <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo URL; ?>cliente">Clientes</a></li>
-                    <li><a href="<?php echo URL; ?>proveedor">Proveedores</a></li>
-                    <li><a href="<?php echo URL; ?>producto">Productos</a></li>
+                    <li><a href="<?php echo URL; ?>cliente"><i class="icon-ok "></i> Clientes</a></li>
+                    <li><a href="<?php echo URL; ?>proveedor"><i class="icon-ok "></i> Proveedores</a></li>
+                    <li><a href="<?php echo URL; ?>producto"><i class="icon-ok "></i> Productos</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs "></i> Configuracion <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo URL; ?>categoria">Definir Categorias</a></li>
-                    <li><a href="<?php echo URL; ?>marca">Definir Marcas</a></li>
-                    <li><a href="<?php echo URL; ?>muestra">Definir Cilindrada</a></li>
+                    <li><a href="<?php echo URL; ?>categoria"><i class="icon-ok "></i> Definir Categorias</a></li>
+                    <li><a href="<?php echo URL; ?>marca"><i class="icon-ok "></i> Definir Marcas</a></li>
+                    <li><a href="<?php echo URL; ?>muestra"><i class="icon-ok "></i> Definir Cilindrada</a></li>
                 </ul>
               </li>
             </ul>
