@@ -1,0 +1,1 @@
+La Suma es: <?php echo $this->suma ?>

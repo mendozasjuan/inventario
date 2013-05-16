@@ -1,0 +1,192 @@
+body{
+    background: silver;
+    font-family: sans-serif,serif;  
+}
+
+#container{
+    margin: auto;
+    width: 900px;
+}
+#header{
+    padding: 20px;
+    background: blue;
+    margin-bottom: 10px;
+
+
+}
+
+#content{
+    margin: auto;
+
+}
+
+#content-main{
+    color: #000000;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 10px;
+
+
+}
+
+#footer{
+    padding: 20px;
+    background: green;
+
+
+}
+
+.bordes{
+    /*OTROS ESTILOS*/
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 11px #000000;
+    -webkit-box-shadow: 0px 0px 11px #000000;
+    box-shadow: 0px 0px 11px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#0000ff', endColorstr = 'transparent');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    -ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#0000ff', endColorstr = 'transparent')";
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+    /*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+    opacity: 0.7;
+    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 70);
+    /*-ms-filter must come before filter*/
+    filter: alpha(opacity = 70);
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*All filters must be placed together*/
+}
+a.enlace{
+    color:#fff;
+    text-decoration: none;
+    background-color: #215CFC;
+    border: 1px solid #215CFC;
+}
+a.enlace:hover {
+    color:yellow;
+    background-color: #333333;
+}
+
+a.enlace-lista{
+    color:#fff;
+    text-decoration: none;
+
+}
+a.enlace-lista img{
+    border: 0px;
+}
+/*a.enlace-lista:hover {
+   background-color: #333333;
+   color: yellow;
+} */
+
+/*NAVBAR*/
+
+#navbar ul{
+    list-style-type: none;
+}
+#navbar li{
+    display: inline;
+    text-align: center;
+    margin: 0 5px 0 0;
+}
+#navbar li a {
+    padding: 2px 7px 2px 7px;
+    color: #ffffff;
+    background-color: #215CFC;
+    border: 1px solid #215CFC;
+    text-decoration: none;
+}
+#navbar li a:hover{
+    background-color: #333333;
+    color: yellow;
+}
+
+
+/* FORMULARIO LOGIN*/
+.formulario div{
+    margin: .4em 0;
+
+}
+
+.formulario div label{
+    width: 15%;
+    float: left;
+
+}
+.formulario label{
+    display:block;
+    font-family:arial,sans-serif;
+    font-size:18px;
+    padding:10px 0 3px;
+    width:200px;
+}
+
+.formulario input.texto{
+
+    color:#666666;
+    font-size:14px;
+    height:20px;
+    padding: 5px;
+    width:200px;
+    font-family:arial,sans-serif;
+}
+
+.formulario input.boton-enviar{  
+    color:#666666;
+    display:block;
+    font-family:arial,sans-serif;
+    height:30px;
+    text-align:center;
+    width:110px;
+}
+
+.formulario option{
+    color:#666666;
+    font-size:12px;
+    height:20px;
+    padding: 5px;
+    width:200px;
+    font-family:arial,sans-serif;
+}
+
+/* ESTILO TABLAS */
+
+.tabla {
+    border-spacing:5px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #215CFC;
+    margin-left: auto ;
+    margin-right: auto;
+    /*background-color: #666666;*/
+
+}
+
+.tabla th{
+    background-color: #215CFC;
+    color:#fff;
+}
+
+.tabla tr{
+    border: 2px solid #215CFC;
+
+}
+
+.tabla tr:hover{
+    background-color: #215CFC;
+    color:#fff;
+}
+.alarna{
+background-color: #008EE8;
+}

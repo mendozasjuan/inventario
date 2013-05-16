@@ -1,0 +1,1 @@
+<h1>Aqui van los reportes avanzados</h1>
