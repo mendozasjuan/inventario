@@ -20,21 +20,21 @@
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <script src="<?php echo PATH_FILE; ?>public/js/jquery.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-transition.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-alert.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-modal.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-dropdown.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-tab.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-tooltip.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-popover.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-button.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-collapse.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-carousel.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-typeahead.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/bootstrap-tab.js"></script>
-    <script src="<?php echo PATH_FILE; ?>public/js/custom.js"></script>
+    <script src="<?php echo URL; ?>public/js/jquery.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-transition.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-alert.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-modal.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-dropdown.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-scrollspy.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-tab.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-tooltip.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-popover.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-button.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-collapse.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-carousel.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-typeahead.js"></script>
+    <script src="<?php echo URL; ?>public/js/bootstrap-tab.js"></script>
+    <script src="<?php echo URL; ?>public/js/custom.js"></script>
                 <!--<style type="text/css" media="all">
                     @import url("<?php echo URL; ?>public/css/style.css");
                     @import url("<?php echo URL; ?>public/css/jquery.wysiwyg.css");
@@ -86,16 +86,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand linkAjax" href="<?php echo PATH_NAV; ?>">SIPGOB</a>
+        <a class="brand" href="<?php echo URL; ?>">M & R Valle Hondo</a>
         <div class="nav-collapse collapse">
           <nav>
             <ul class="nav">
               <li class="dropdown">
+                <a href="<?php echo URL; ?>" >Inicio </a>
+              </li>
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenes <b class="caret"></b></a>
-                <span style="position: absolute; top: 2px; font-size: 9px; padding: 1px 5px; right: 3px;" class="badge badge-success">1</span>
                 <ul class="dropdown-menu">
-                  <li><a class="linkAjax" href="<?php print PATH_NAV.'orden/admin'; ?>">Administrar</a></li>
-                  <li><a class="linkAjax" href="<?php print PATH_NAV.'orden/ver'; ?>">Ver</a></li>
+                  <li><a href="<?php print URL.'orden/admin'; ?>">Administrar</a></li>
+                  <li><a href="<?php print URL.'orden/ver'; ?>">Ver</a></li>
                 </ul>
               </li>
             </ul>
