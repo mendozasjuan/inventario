@@ -30,61 +30,21 @@
 
 
 <div class="container">
-    <div class="bs-docs-example">
-        <div class="descriptionForm">ADMINISTRAR ORDENES</div>
-        <div>
-            <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-plus-sign"></i> Agregar</a>
-        </div>
-        <hr>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Orden</th>
-                    <th>Fecha Emision de la orden</th>
-                    <th>Fecha de Culminacion</th>
-                    <th>Dia Restantes</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Asfaltado de La marroquina</td>
-                    <td>14/04/2013</td>
-                    <td>17/05/2013</td>
-                    <td><i class="icon-exclamation"></i> <span>1 dia</span> </td>
-                    <td>
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-book"></i> Reporte</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-edit"></i> Observación</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-eye-open"></i> Supervisión</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Asfaltado de La marroquina</td>
-                    <td>14/05/2013</td>
-                    <td>30/05/2013</td>
-                    <td>14 dias</td>
-                    <td>
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-book"></i> Reporte</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-edit"></i> Observación</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-eye-open"></i> Supervisión</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Asfaltado de La marroquina</td>
-                    <td>14/05/2013</td>
-                    <td>30/05/2013</td>
-                    <td>14 dias</td>
-                    <td>
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-book"></i> Reporte</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-edit"></i> Observación</a> 
-                        <a href="<?php print PATH_NAV.'orden/crear'; ?>" class="btn"><i class="icon-eye-open"></i> Supervisión</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="bs-docs-example row">
+        <div class="descriptionForm">BIENVENIDO</div>
+        <a class="btn btn-primary btn-large span3" title="Usuarios" href="<?php echo URL; ?>usuario" >
+            <i class="icon-group icon-4x"></i>
+            <h3>Usuarios</h3>
+        </a>
+
+        <a class="btn  btn-large span3" title="Usuarios" href="<?php echo URL; ?>categoria" data-content="">
+            <i class="icon-list-ol icon-4x"></i>
+            <h3>Categorias</h3>
+        </a>
+
+        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>categoria" data-content="">
+            <i class="icon-user"></i>
+            <h3>Clientes</h3>
+        </a>
     </div>
 </div>

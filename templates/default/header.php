@@ -90,7 +90,7 @@
           <nav>
             <ul class="nav">
               <li class="dropdown">
-                <a href="<?php echo URL; ?>" >Inicio </a>
+                <a href="<?php echo URL; ?>" ><i class="icon-home "></i> Inicio </a>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datos <b class="caret"></b></a>
@@ -101,7 +101,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuracion <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs "></i> Configuracion <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo URL; ?>categoria">Definir Categorias</a></li>
                     <li><a href="<?php echo URL; ?>marca">Definir Marcas</a></li>
