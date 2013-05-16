@@ -70,8 +70,8 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="btn-group pull-right">
-          <div class="btn btn-warning disabled"><i class="icon-user icon-white"></i> <span class="hidden-phone"><?php echo $this->usuario; ?></span></div>
-          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+          <div class="btn btn-success disabled"><i class="icon-user icon-white"></i> <span class="hidden-phone"><?php echo $this->usuario; ?></span></div>
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -93,7 +93,7 @@
                 <a href="<?php echo URL; ?>" ><i class="icon-home "></i> Inicio </a>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datos <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-hdd "></i> Datos <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo URL; ?>cliente">Clientes</a></li>
                     <li><a href="<?php echo URL; ?>proveedor">Proveedores</a></li>

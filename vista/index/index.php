@@ -32,19 +32,34 @@
 <div class="container">
     <div class="bs-docs-example row">
         <div class="descriptionForm">BIENVENIDO</div>
-        <a class="btn btn-primary btn-large span3" title="Usuarios" href="<?php echo URL; ?>usuario" >
+        <a class="btn btn-large span3" style="margin-bottom:10px;" title="Usuarios" href="<?php echo URL; ?>usuario" >
             <i class="icon-group icon-4x"></i>
             <h3>Usuarios</h3>
         </a>
 
-        <a class="btn  btn-large span3" title="Usuarios" href="<?php echo URL; ?>categoria" data-content="">
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>categoria" data-content="">
             <i class="icon-list-ol icon-4x"></i>
             <h3>Categorias</h3>
         </a>
 
-        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>categoria" data-content="">
-            <i class="icon-user"></i>
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>categoria" data-content="">
+            <i class="icon-list-ol icon-4x"></i>
+            <h3>Categorias</h3>
+        </a>
+
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>cliente" data-content="">
+            <i class="icon-user icon-4x"></i>
             <h3>Clientes</h3>
+        </a>
+
+        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>proveedor" data-content="">
+            <i class="icon-user icon-4x"></i>
+            <h3>Proveedores</h3>
+        </a>
+
+        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>producto" data-content="">
+            <i class="icon-user icon-4x"></i>
+            <h3>Productos</h3>
         </a>
     </div>
 </div>
