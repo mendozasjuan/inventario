@@ -16,7 +16,8 @@ class Login extends Controlador {
    }
     
     public function index(){
-        // exit(md5('123456'));
+
+       // exit(Hash::create('md5', 'admin'));
         $this->view->titulo = ' - Login';
         $this->view->js = array('login/js/login.js');
 
