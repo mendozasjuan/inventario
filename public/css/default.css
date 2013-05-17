@@ -4,14 +4,19 @@ textarea{
 body {
 	padding-top: 60px;
 	padding-bottom: 40px;
+
 }
 .bs-docs-example {
 	position: relative;
 	margin: 15px 0;
 	padding: 39px 19px 14px;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	border: 1px solid #ddd;
 	border-radius: 4px;
+	background-image: url('../images/clickenlared.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size:200px 200px;
 }
 
 .bs-docs-example > .descriptionForm {
