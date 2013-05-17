@@ -6,6 +6,10 @@ body {
 	padding-bottom: 40px;
 
 }
+
+.span3:hover{
+	border:1px solid #f4982b;
+}
 .bs-docs-example {
 	position: relative;
 	margin: 15px 0;

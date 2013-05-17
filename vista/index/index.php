@@ -43,27 +43,27 @@
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>muestra" data-content="">
-            <i class="icon-list-ol icon-4x"></i>
+            <i class="icon-puzzle-piece icon-4x"></i>
             <h3>Modelo</h3>
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>cliente" data-content="">
-            <i class="icon-user icon-4x"></i>
+            <i class="icon-briefcase icon-4x"></i>
             <h3>Clientes</h3>
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>proveedor" data-content="">
-            <i class="icon-user icon-4x"></i>
+            <i class="icon-truck icon-4x"></i>
             <h3>Proveedores</h3>
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>producto" data-content="">
-            <i class="icon-user icon-4x"></i>
+            <i class="icon-gift icon-4x"></i>
             <h3>Productos</h3>
         </a>
 
         <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>factura" data-content="">
-            <i class="icon-user icon-4x"></i>
+            <i class="icon-table icon-4x"></i>
             <h3>Facturas</h3>
         </a>
     </div>
