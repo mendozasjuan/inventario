@@ -52,14 +52,19 @@
             <h3>Clientes</h3>
         </a>
 
-        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>proveedor" data-content="">
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>proveedor" data-content="">
             <i class="icon-user icon-4x"></i>
             <h3>Proveedores</h3>
         </a>
 
-        <a class="btn btn-large span3" title="Usuarios" href="<?php echo URL; ?>producto" data-content="">
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>producto" data-content="">
             <i class="icon-user icon-4x"></i>
             <h3>Productos</h3>
+        </a>
+
+        <a class="btn btn-large span3" title="Usuarios" style="margin-bottom:10px;" href="<?php echo URL; ?>factura" data-content="">
+            <i class="icon-user icon-4x"></i>
+            <h3>Facturas</h3>
         </a>
     </div>
 </div>
