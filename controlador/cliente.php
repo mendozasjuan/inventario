@@ -13,7 +13,7 @@
 class Cliente extends Controlador {
     
     function __construct() {
-        parent::__construct();   
+        parent::__construct();
         Session::init();
         $logeado = Session::get('logeado');
         $role = Session::get('rol');

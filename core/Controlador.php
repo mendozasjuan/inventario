@@ -11,6 +11,7 @@ class Controlador {
             require $ruta;
             $nombreModelo = $nombre . '_Model';
             $this->modelo = new $nombreModelo();
+
         }
     }
 
