@@ -1,42 +1,4 @@
-<script type="text/javascript">
-            $(function() {
-                             function search_cliente(){
-                $.ajax({
-                    //data: "q="+q+"&fi="+fi+"&ff="+ff+"&t="+1,
-                    type: "POST",
-                    dataType: "json",
-                    url: "<?php echo URL;?>cliente/buscar_clientes/"+$('#clientes').val(),
-                        success: function(data){
-                            if(data.length > 0){
-                                var html ='';
-                                $.each(data, function(i,item){
-                                    html += '<tr class="rows"><td>'+item.id+'</td><td>'+item.nacionalidad+'-'+item.cedula+'</td><td>'+item.nombre_apellido+'</td><td>'+item.direccion+'</td><td>'+item.telefono+'</td><td><a class="tip" title="Editar" href="<?php echo URL ?>cliente/editar/'+item.id+'"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a>&nbsp;<a class="tip" title="Eliminar" href="#" onclick="eliminarCliente('+item.id+')"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a></td></tr>';
-                                });
-                                                                //console.log(html);
-
-                                $(".sortable tbody").html(html);
-                                $(".sortable").trigger("update");
-                                var sorting = [[1,0]];
-                                $(".sortable").trigger("sorton",[sorting]);
-                            }
-                        }
-                  });
-             }
-
-            //search_factura($("#empresa").find("option:selected").val(),$("#fechai").val(),$("#fechaf").val());
-                        //search_factura();
-
-                        $("#clientes").live("keyup",(function(){
-                search_cliente();
-            }));
-
-
-            });
-
-
-
-        </script>
-<div class="block_head">
+<!-- <div class="block_head">
         <div class="bheadl"></div>
         <div class="bheadr"></div>
         
@@ -55,8 +17,7 @@
                 <form action="" method="post">
         
             <table class="sortable" cellpadding="0" cellspacing="0" width="100%">
-<!--<div>-->
-<!--<a class="enlace-lista" href="<?php echo URL ?>persona/nuevo"><img src="<?php echo URL; ?>public/images/user_add.png" alt="Nueva Persona" title="Agregar Persona"/></a>-->
+
 
     <thead>
         <tr>
@@ -155,5 +116,47 @@ foreach ($this->listaClientes as $key => $value) {
     </p>
     
     </form>
-</div>
+</div> -->
 <!--</div>-->
+
+<div class="container">
+
+    <div class="bs-docs-example row">
+        <div class="descriptionForm">Clientes</div>
+        <div>
+            <a href="<?php print URL.'orden/nuevo'; ?>" class="btn"><i class="icon-plus-sign"></i> Nuevo</a>
+        </div>
+        <hr>
+        <div class="input-prepend">
+            <span class="add-on"><i class="icon-search"></i></span>
+            <input class="span2" id="clientes" type="text" placeholder="Texto a buscar">
+        </div>
+
+        <table class="table table-bordered table-hover sortable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php 
+                foreach ($this->listaClientes as $key => $value) {
+            ?>
+                <tr>
+                    <td><?php echo $value['id'];?></td>
+                    <td><?php echo $value['nacionalidad']."-".$value['cedula'];?></td>
+                    <td><?php echo $value['nombre_apellido'];?></td>
+                    <td><?php echo $value['direccion'];?> </td>
+                    <td><?php echo $value['telefono'];?></td>
+                    <td>Acciones</td>
+                </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+</div>
