@@ -121,7 +121,7 @@ foreach ($this->listaClientes as $key => $value) {
 
 <div class="container">
 
-    <div class="bs-docs-example row">
+    <div class="bs-docs-example row" style="height: 500px;">
         <div class="descriptionForm">Clientes</div>
         <div>
             <a href="<?php print URL.'orden/nuevo'; ?>" class="btn"><i class="icon-plus-sign"></i> Nuevo</a>
@@ -132,7 +132,7 @@ foreach ($this->listaClientes as $key => $value) {
             <input class="span2" id="clientes" type="text" placeholder="Texto a buscar">
         </div>
 
-        <table class="table table-bordered table-hover sortable">
+        <table id="tabla-clientes" class="table table-bordered table-hover sortable" >
             <thead>
                 <tr>
                     <th>Id</th>

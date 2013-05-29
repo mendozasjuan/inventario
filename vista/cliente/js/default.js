@@ -26,19 +26,17 @@ $(document).ready(function(){
                     //data: "q="+q+"&fi="+fi+"&ff="+ff+"&t="+1,
                     type: "POST",
                     dataType: "json",
-                    url: "<?php echo URL;?>cliente/buscar_clientes/"+$('#clientes').val(),
+                    url: URL+'cliente/buscar_clientes/'+$('#clientes').val(),
                         success: function(data){
                             if(data.length > 0){
                                 var html ='';
                                 $.each(data, function(i,item){
-                                    html += '<tr class="rows"><td>'+item.id+'</td><td>'+item.nacionalidad+'-'+item.cedula+'</td><td>'+item.nombre_apellido+'</td><td>'+item.direccion+'</td><td>'+item.telefono+'</td><td><a class="tip" title="Editar" href="<?php echo URL ?>cliente/editar/'+item.id+'"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a>&nbsp;<a class="tip" title="Eliminar" href="#" onclick="eliminarCliente('+item.id+')"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a></td></tr>';
+                                    html += '<tr ><td>'+item.id+'</td><td>'+item.nacionalidad+'-'+item.cedula+'</td><td>'+item.nombre_apellido+'</td><td>'+item.direccion+'</td><td>'+item.telefono+'</td><td><a class="tip" title="Editar" href="<?php echo URL ?>cliente/editar/'+item.id+'"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a>&nbsp;<a class="tip" title="Eliminar" href="#" onclick="eliminarCliente('+item.id+')"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a></td></tr>';
                                 });
                                                                 //console.log(html);
 
-                                $(".sortable tbody").html(html);
-                                $(".sortable").trigger("update");
-                                var sorting = [[1,0]];
-                                $(".sortable").trigger("sorton",[sorting]);
+                                $("#tabla-clientes tbody").html(html);
+                                $("#tabla-clientes").trigger("update");
                             }
                         }
                   });
@@ -47,7 +45,8 @@ $(document).ready(function(){
             //search_factura($("#empresa").find("option:selected").val(),$("#fechai").val(),$("#fechaf").val());
                         //search_factura();
 
-                        $("#clientes").live("keyup",(function(){
+                        $("#clientes").on("keyup",(function(){
+                            console.log("voy");
                 search_cliente();
             }));
         

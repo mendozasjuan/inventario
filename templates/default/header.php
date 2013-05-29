@@ -20,6 +20,9 @@
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        URL = "<?php echo URL ?>"
+    </script>
     <script src="<?php echo URL; ?>public/js/jquery.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-transition.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-alert.js"></script>
