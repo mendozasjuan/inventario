@@ -37,7 +37,14 @@
     <script src="<?php echo URL; ?>public/js/bootstrap-carousel.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/facebox.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.select_skin.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.filestyle.mini.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.date_input.pack.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.img.preload.js"></script>
+    <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.jCombo.js"></script>
     <script src="<?php echo URL; ?>public/js/custom.js"></script>
+    
                 <!--<style type="text/css" media="all">
                     @import url("<?php echo URL; ?>public/css/style.css");
                     @import url("<?php echo URL; ?>public/css/jquery.wysiwyg.css");
@@ -49,7 +56,7 @@
                 <!--<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.img.preload.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.filestyle.mini.js"></script>
-                <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.wysiwyg.js"></script>
+                
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.date_input.pack.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/facebox.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.select_skin.js"></script>
@@ -58,7 +65,7 @@
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.tablesorter.pager.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/ajaxupload.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.pngfix.js"></script>
-                <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.tipsy.js"></script>
+                
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.validate.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
                 <script type="text/javascript" src="<?php echo URL; ?>public/jquery-ui/js/jquery-ui-1.8.20.custom.min.js"></script>-->

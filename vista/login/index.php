@@ -66,6 +66,8 @@
         <script type="text/javascript" src="http://localhost/inventario/public/js/jquery.tablesorter.min.js"></script>
         <script type="text/javascript" src="http://localhost/inventario/public/js/ajaxupload.js"></script>
         <script type="text/javascript" src="http://localhost/inventario/public/js/jquery.pngfix.js"></script>
+        <script type="text/javascript" src="http://localhost/inventario/public/js/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="http://localhost/inventario/public/js/jquery.validate.js"></script>
         <script type="text/javascript" src="http://localhost/inventario/public/js/custom.js"></script>
     </body>
 </html>

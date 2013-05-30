@@ -124,8 +124,9 @@ foreach ($this->listaClientes as $key => $value) {
     <div class="bs-docs-example row" style="height: 500px;">
         <div class="descriptionForm">Clientes</div>
         <div>
-            <a href="<?php print URL.'orden/nuevo'; ?>" class="btn"><i class="icon-plus-sign"></i> Nuevo</a>
+            <a href="<?php print URL.'cliente/nuevo'; ?>" class="btn"><i class="icon-plus-sign"></i> Nuevo</a>
         </div>
+
         <hr>
         <div class="input-prepend">
             <span class="add-on"><i class="icon-search"></i></span>
@@ -135,7 +136,7 @@ foreach ($this->listaClientes as $key => $value) {
         <table id="tabla-clientes" class="table table-bordered table-hover sortable" >
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>#</th>
                     <th>Cedula</th>
                     <th>Nombre</th>
                     <th>Direccion</th>
@@ -153,10 +154,27 @@ foreach ($this->listaClientes as $key => $value) {
                     <td><?php echo $value['nombre_apellido'];?></td>
                     <td><?php echo $value['direccion'];?> </td>
                     <td><?php echo $value['telefono'];?></td>
-                    <td>Acciones</td>
+                    <td>
+                        <a  class="btn" title="Editar" href="<?php echo URL ?>cliente/editar/<?php echo $value['id'] ?>"><i class="icon-pencil"></i> Editar</a>
+                        <a   class="btn" title="Eliminar" href="#" onclick="eliminarClientes('<?php print $value['id']?>')" ><i class="icon-trash"></i> Eliminar</a>
+                    </td>
                 </tr>
             <?php }?>
             </tbody>
         </table>
+    </div>
+</div>
+
+<div id="eliminarCliente" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Eliminar Cliente</h3>
+    </div>
+    <div class="modal-body">
+        <p>¿Desea Eliminar este Cliente?</p>
+        </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+        <a id="aceptarEliminar" href="#" class="btn btn-primary">Aceptar</a>
     </div>
 </div>

@@ -31,7 +31,7 @@ $(document).ready(function(){
                             if(data.length > 0){
                                 var html ='';
                                 $.each(data, function(i,item){
-                                    html += '<tr ><td>'+item.id+'</td><td>'+item.nacionalidad+'-'+item.cedula+'</td><td>'+item.nombre_apellido+'</td><td>'+item.direccion+'</td><td>'+item.telefono+'</td><td><a class="tip" title="Editar" href="<?php echo URL ?>cliente/editar/'+item.id+'"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a>&nbsp;<a class="tip" title="Eliminar" href="#" onclick="eliminarCliente('+item.id+')"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a></td></tr>';
+                                    html += '<tr ><td>'+item.id+'</td><td>'+item.nacionalidad+'-'+item.cedula+'</td><td>'+item.nombre_apellido+'</td><td>'+item.direccion+'</td><td>'+item.telefono+'</td><td><a  class="btn" title="Editar" href="'+URL+'cliente/editar/'+item.id+'"><i class="icon-pencil"></i> Editar</a><a  class="btn" title="Eliminar" href="#" onclick="eliminarClientes('+item.id+')"><i class="icon-trash"></i> Eliminar</a></td></tr>';
                                 });
                                                                 //console.log(html);
 
@@ -50,15 +50,13 @@ $(document).ready(function(){
                 search_cliente();
             }));
         
-       
+       $("#aceptarEliminarCliente").on("click",function(){
+
+       })
 
 });
 
 function eliminarClientes(id){
-    if(confirm("¿Desea Eliminar este Cliente?")){
-        location.href="http://localhost/inventario/cliente/eliminar/"+id;
-    }
-//    else{
-//        return false;
-//    }
+    $("#aceptarEliminar").attr("href",URL+"cliente/eliminar/"+id);
+    $('#eliminarCliente').modal();
 }

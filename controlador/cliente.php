@@ -54,8 +54,13 @@ class Cliente extends Controlador {
        $data['telefono'] = $_POST['telefono'];
        $data['parroquia'] = $_POST['parroquia'];
        
-       $this->modelo->crear($data);
-       header('location:' . URL .'cliente');
+       if($this->modelo->crear($data)){
+        $this->view->mensaje="Datos Guardados con Exito";
+        header('location:' . URL .'cliente');
+       }else{
+        $this->view->mensaje="Datos no se han guardado";
+       }
+       
     }
     
      public function guardarEditar($id){

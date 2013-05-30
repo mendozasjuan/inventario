@@ -33,7 +33,12 @@ class Cliente_Model extends Modelo {
             'telefono'       => $data['telefono'],
             'idParroquia'    => $data['parroquia']
         );
-        $this->db->insertar('clientes', $datos);
+
+        if($this->db->insertar('clientes', $datos)){
+          return TRUE;
+        }else{
+          return FALSE;
+        }
     }
     
     public function guardarEditar($data){

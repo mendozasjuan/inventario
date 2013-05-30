@@ -28,7 +28,11 @@ class Database extends PDO{
             $consulta->bindValue(":$key", $value);
         }
         
-        $consulta->execute();
+        if($consulta->execute()){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
     }
     
     /**
