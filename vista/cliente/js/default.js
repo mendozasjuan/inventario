@@ -46,13 +46,9 @@ $(document).ready(function(){
                         //search_factura();
 
                         $("#clientes").on("keyup",(function(){
-                            console.log("voy");
+
                 search_cliente();
             }));
-        
-       $("#aceptarEliminarCliente").on("click",function(){
-
-       })
 
 });
 
