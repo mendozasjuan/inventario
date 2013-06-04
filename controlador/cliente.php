@@ -82,11 +82,35 @@ class Cliente extends Controlador {
     }
     
     public function cargarParroquias($id){
-        $this->modelo->cargarParroquias($id);
+        header('Content-Type: text/xml; charset=utf-8'); 
+        $html="";
+        $array=$this->modelo->cargarParroquias($id);
+        $datos=array();
+        foreach ($array as $key => $value) {
+            $datos[$value['idParroquia']]=utf8_encode($value['parroquia']);
+        }
+        echo json_encode($datos);
+    }
+
+    public function cargarMunicipios($id){
+        header('Content-Type: text/xml; charset=utf-8'); 
+        $html="";
+        $array=$this->modelo->seleccionarMunicipios($id);
+        $datos=array();
+        foreach ($array as $key => $value) {
+            $datos[$value['idMunicipio']]=utf8_encode($value['municipio']);
+        }
+        echo json_encode($datos);
     }
 
     public function buscar_clientes($nombre){
-         $this->modelo->buscar_cliente($nombre);
+         $data=$this->modelo->buscar_cliente($nombre);
+         echo json_encode($data);
+    }
+
+    public function buscar_cliente_individual(){
+      $data=$this->modelo->listarClienteIndividual($_POST['id']);
+      echo json_encode($data);
     }
     
 }

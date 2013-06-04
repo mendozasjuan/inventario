@@ -30,11 +30,7 @@
             <div class="control-group">
                 <label class="control-label" for="municipio">Municipio</label>
                 <div class="controls">
-                    <select name="municipio" id="municipio">
-                        <option value="seleccione">Seleccione</option>
-                        <?php foreach ($this->municipios as $key => $value) {?>
-                        <option value="<?php echo $value['idMunicipio']?>" <?php if ($this->cliente['idMunicipio'] == $value['idMunicipio']) echo 'selected' ?>><?php echo utf8_decode($value['municipio'])?></option>
-                         <?php }?>
+                    <select class="municipio" name="municipio" id="municipio">
                     </select>
                 </div>
 
@@ -43,9 +39,7 @@
             <div class="control-group">
                 <label class="control-label" for="parroquia">Parroquia</label>
                 <div class="controls">
-                    <select name="parroquia" id="parroquia">
-                        <option value="seleccione">Seleccione</option>
-                        <option value="<?php echo $this->cliente['idParroquia']?>" selected><?php echo utf8_decode($this->cliente['parroquia'])?></option>
+                    <select class="parroquia" name="parroquia" id="parroquia">
                     </select>        
                 </div>
 

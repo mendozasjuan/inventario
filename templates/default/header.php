@@ -37,6 +37,7 @@
     <script src="<?php echo URL; ?>public/js/bootstrap-carousel.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo URL; ?>public/js/bootstrap-tab.js"></script>
+    <script src="<?php echo URL; ?>public/js/jPages.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>public/js/facebox.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.select_skin.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.filestyle.mini.js"></script>

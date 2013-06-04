@@ -71,8 +71,9 @@ class Cliente_Model extends Modelo {
         $consulta->setFetchMode(PDO::FETCH_ASSOC);
         $consulta->execute(array(':id' => $id));
         $data = $consulta->fetchAll();
+        return $data;
         //retorna el formato json
-        echo json_encode($data);
+        
     }
 
     public function buscar_cliente($nombre) {

@@ -217,3 +217,19 @@ function validnum(e) {
     return patron.test(te);  
 	// uso  onKeyPress="return validnum(event)"
 }
+
+function cargar_combos(selected_estado=0,selected_municipio=0,selected_parroquia=0){
+        $(".municipio").jCombo(URL+'cliente/cargarMunicipios/',{
+            dataType:'json',
+            method: "POST",
+            selected_value:selected_municipio
+        });
+        $(".parroquia").jCombo(URL+'cliente/cargarParroquias/',{
+            dataType:'json',
+            method: "POST",
+            parent: ".municipio",
+            selected_value:selected_parroquia
+        })
+
+
+    }

@@ -144,7 +144,7 @@ foreach ($this->listaClientes as $key => $value) {
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="paginar">
             <?php 
                 foreach ($this->listaClientes as $key => $value) {
             ?>
@@ -162,6 +162,10 @@ foreach ($this->listaClientes as $key => $value) {
             <?php }?>
             </tbody>
         </table>
+        <div  class="pagination pagination-centered">
+            <ul id="paginacion">
+            </ul>
+        </div>
     </div>
 </div>
 
