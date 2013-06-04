@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //paginar();
+    paginar();
     cargar_combos();
     // $("#municipio").change(function(){
     //     //obtener el valor de lo que esta seleccionado
@@ -37,7 +37,7 @@ $(document).ready(function(){
                                 });
                                 $("#paginar").html(html);
                                 $("#paginar").trigger("update");
-                                //paginar();
+                                paginar();
                             }
                         }
                   });
@@ -54,7 +54,7 @@ $(document).ready(function(){
             function paginar(){
               $("#paginacion").jPages({
                 containerID: "paginar",
-                perPage:1,
+                perPage:5,
                 previous: "Anterior",
                 next: "Siguiente"
               });            

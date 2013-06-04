@@ -81,7 +81,7 @@ class Cliente_Model extends Modelo {
        $consulta = $this->db->ejecutarConsulta("SELECT * from clientes where nombre_apellido like '%$nombre%' or cedula like '%$nombre%'");
        $consulta->setFetchMode(PDO::FETCH_ASSOC);
         $data = $consulta->fetchAll();
-        echo json_encode($data);
+        return $data;
     }
     
     
