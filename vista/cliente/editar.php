@@ -16,14 +16,14 @@
             <div class="control-group">
                 <label class="control-label" for="nombre">Cedula</label>
                 <div class="controls">
-                    <input type="text" name="cedula" id="cedula" value="<?php echo $this->cliente['cedula'] ?>" size="55" >
+                    <input type="text" name="cedula" id="cedula" value="" size="55" >
                 </div>
             </div>
             
             <div class="control-group">
                 <label class="control-label" for="nombre">Nombre</label>
                 <div class="controls">
-                    <input  type="text" name="nombre" id="nombre" value="<?php echo $this->cliente['nombre_apellido'] ?>" size="55" >
+                    <input  type="text" name="nombre" id="nombre" value="" size="55" >
                 </div>
             </div>
             
@@ -48,7 +48,7 @@
             <div class="control-group">
                 <label class="control-label" for="direccion">Direccion</label>
                 <div class="controls">
-                    <input type="text" name="direccion" id="direccion" value="<?php echo $this->cliente['direccion'] ?>"/>                
+                    <input type="text" name="direccion" id="direccion" value=""/>                
                 </div>
 
             </div>
@@ -56,13 +56,19 @@
             <div class="control-group">
                 <label class="control-label" for="password">Telefono</label>
                 <div class="controls">
-                    <input  type="text" name="telefono" id="telefono" value="<?php echo $this->cliente['telefono'] ?>" size="55" >       
+                    <input  type="text" name="telefono" id="telefono" value="" size="55" >       
 
+                </div>
+
+
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input class="btn btn-primary" type="submit" value="Actualizar" />
                 </div>
                 <div class="controls">
-                    <input class="btn btn-primary" type="submit" value="Actualizar" />   
+                    <input id="atras" class="btn btn-primary" type="button" value="Atras" />
                 </div>
-
             </div>
         </form>
     </div>

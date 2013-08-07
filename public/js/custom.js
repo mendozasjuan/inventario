@@ -218,7 +218,7 @@ function validnum(e) {
 	// uso  onKeyPress="return validnum(event)"
 }
 
-function cargar_combos(selected_estado=0,selected_municipio=0,selected_parroquia=0){
+function cargar_combos(selected_municipio=0,selected_parroquia=0){
         $(".municipio").jCombo(URL+'cliente/cargarMunicipios/',{
             dataType:'json',
             method: "POST",

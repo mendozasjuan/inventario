@@ -58,6 +58,11 @@ class Proveedor extends Controlador {
     public function buscar_proveedores($nombre){
          $this->modelo->buscar_proveedor($nombre);
     }
+
+    public function buscar_proveedor_individual(){
+      $data=$this->modelo->listarProveedorIndividual($_POST['id']);
+      echo json_encode($data);
+    }
     
 
     

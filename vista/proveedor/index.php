@@ -1,88 +1,32 @@
-<script type="text/javascript">
-        	$(function() {
-                             function search_proveedor(){
-				$.ajax({
-					//data: "q="+q+"&fi="+fi+"&ff="+ff+"&t="+1,
-					type: "POST",
-					dataType: "json",
-					url: "<?php echo URL;?>proveedor/buscar_proveedores/"+$('#proveedores').val(),
-						success: function(data){
-							if(data.length > 0){
-								var html ='';
-								$.each(data, function(i,item){
-									html += '<tr class="rows">\n\
-                                                                                    <td>'+item.id+'</td>\n\
-                                                                                    <td>'+item.rif+'</td>\n\
-                                                                                    <td>'+item.razon_social+'</td>\n\
-                                                                                    <td>'+item.telefono+'</td>\n\\n\
-                                                                                    <td>'+item.direccion+'</td>\n\
-                                                                                    <td>'+item.email+'</td>\n\
-                                                                                    <td>\n\
-                                                                                        <a class="tip" title="Ingresar Producto" href="<?php echo URL ?>producto/ingresar_producto/'+item.id+'"><img src="<?php echo URL; ?>public/images/edit_add.png" alt="Nuevo Producto" /></a>&nbsp;\n\
-                                                                                        <a class="tip" title="Listar Productos" href="<?php echo URL ?>producto/producto_proveedor/'+item.id+'"><img width="16" height="16" src="<?php echo URL; ?>public/images/list.png" alt="Listar Productos" /></a>&nbsp;\n\
-                                                                                        <a class="tip" title="Editar" href="<?php echo URL ?>proveedor/editar/'+item.id+'"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a>&nbsp;\n\
-                                                                                        <a class="tip" title="Eliminar" href="#" onclick="eliminarProveedor('+item.id+')"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a>\n\
-                                                                                    </td>\n\
-                                                                                 </tr>';
-								});
-                                                                console.log(html);
+<div id="index">
+    <div class="container">
 
-								$(".sortable tbody").html(html);
-								$(".sortable").trigger("update");
-								var sorting = [[1,0]];
-								$(".sortable").trigger("sorton",[sorting]);
-							}
-						}
-				  });
-			 }
+        <div class="bs-docs-example row" style="height: 500px;">
+            <div class="descriptionForm">Proveedores</div>
+            <div>
+                <a href="<?php print URL.'proveedor/nuevo'; ?>" class="btn"><i class="icon-plus-sign"></i> Nuevo</a>
+            </div>
 
-			//search_factura($("#empresa").find("option:selected").val(),$("#fechai").val(),$("#fechaf").val());
-                        //search_factura();
+            <hr>
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-search"></i></span>
+                <input class="span2" id="proveedores" type="text" placeholder="Texto a buscar">
+            </div>
 
-                        $("#proveedores").live("keyup",(function(){
-				search_proveedor();
-			}));
-
-
-			});
-
-
-
-        </script>
-<div class="block_head">
-        <div class="bheadl"></div>
-        <div class="bheadr"></div>
-        
-        <h2> Proveedores</h2>
-        
-        <ul class="tabs">
-            <li class="active nobg"><a href="#list">Listar</a></li>
-            <li><a href="#new">Nuevo Proveedor</a></li>
-        </ul>
-        <ul>
-            <li>Buscar:<input type="text" id="proveedores" value="" ></li>
-        </ul>
-    </div>
-<div style="display: block;" class="block_content tab_content " id="list">
-    	        <form action="" method="post">
-        
-            <table class="sortable" cellpadding="0" cellspacing="0" width="100%">
-<!--<div>-->
-<!--<a class="enlace-lista" href="<?php echo URL ?>persona/nuevo"><img src="<?php echo URL; ?>public/images/user_add.png" alt="Nueva Persona" title="Agregar Persona"/></a>-->
-
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Rif</th>
-            <th>Razon Social</th>
-            <th>Telefono</th>
-            <th>Direccion</th>
-            <th>Email</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-<?php 
+            <table id="tabla-proveedores" class="table table-bordered table-hover sortable" >
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Rif</th>
+                        <th>Razon Social</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="paginar">
+                <?php 
 foreach ($this->listaProveedores as $key => $value) {
 ?>
    <tr>
@@ -107,73 +51,97 @@ foreach ($this->listaProveedores as $key => $value) {
 
         <td class="options">
             
-            <a class="tip" title="Listar Productos" href="<?php echo URL ?>producto/producto_proveedor/<?php echo $value['id'] ?>"><img width="16" height="16" src="<?php echo URL; ?>public/images/list.png" alt="Listar Productos" /></a>
-            <a class="tip" title="Editar" href="<?php echo URL ?>proveedor/editar/<?php echo $value['id'] ?>"><img src="<?php echo URL; ?>public/images/bedit.png" alt="Editar" /></a> 
-            <a class="tip" title="Eliminar" href="http://localhost/inventario/proveedor/eliminar/<?php echo $value['id'] ?>"><img  src="<?php echo URL; ?>public/images/bdelete.png" alt="Eliminar" /></a>
+            <a class="btn" title="Listar Productos" href="<?php echo URL ?>producto/producto_proveedor/<?php echo $value['id'] ?>">
+                <i class="icon-pencil"></i> Listar Productos
+            </a>
+            <a class="btn" title="Editar" onclick="proveedor_individual(<?php echo $value['id'] ?>)" href="#">
+                <i class="icon-pencil"></i> Editar
+            </a> 
+            <a class="btn" title="Eliminar" href="#" onclick="eliminarProveedor('<?php echo $value['id'] ?>')">
+                <i class="icon-pencil"></i> Eliminar
+            </a>
         </td>
         
     </tr>
 <?php } ?>
-</tbody>
-    </table>
-                                               </form>
-<!--    <div id="pager" class="pagination right">
-            <a class="prev" href="#">«</a> <span id="pnumbers"><span id="pagernums"><a href="javascript:;" class="active">1</a></span></span> <a class="next" href="#">»</a>
-            <select class="pagesize">
-                    <option value="10" selected="selected">10</option>
-        
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="40">40</option>
-                </select>
-        </div>-->
-       <script type="text/javascript">
-        	$(function () {
-				$("table.sortable_list").tablesorter({
-					headers: { 0: { sorter: false}, 7: {sorter: false} },		// Disabled on the 1st and 6th columns
-					widgets: ['zebra']
-				}).tablesorterFilter({ filterContainer: $("#filtro"),
-                    filterClearContainer: $("#filterClearTwo"),
-                    filterCaseSensitive: false
-                }).tablesorterPager({container: $("#pager"),positionFixed: false}
-				);
-				
-			});
-        </script> 
-    </div>
-
-<div style="display: none;" class="block_content tab_content hide" id="new">
-    <form novalidate="novalidate" method="post" action="<?php echo URL ?>proveedor/crear" enctype="multipart/form-data" id="form_">
-    
-    <p>
-        <label for="rif">Rif</label><br>
-        <input type="text" name="rif" id="rif" value="" size="55" class="text required"/>
-    </p>
-    
-    <p>
-        <label for="razon_social">Razon Social</label><br>
-        <input  type="text" name="razon_social" id="razon_social" value="" size="55" class="text required" />
-    </p>
-    
-    <p>
-        <label for="password">Telefono</label><br>
-        <input  type="text" name="telefono" id="telefono" value="" size="55" class="text required"/>
-    </p>
-    
-    <p>
-        <label for="direccion">Direccion</label><br>
-        <input  type="text" name="direccion" id="direccion" value="" size="55" class="text required"/>
-    </p>
-    
-    <p>
-        <label for="password">Email</label><br>
-        <input  type="text" name="email" id="email" value="" size="55" class="text required"/>
-    </p>
-    
-    <p>
-       <input class="submit long" class="boton-enviar" type="submit" /> 
-    </p>
-    
-    </form>
+                </tbody>
+            </table>
+            <div  class="pagination pagination-centered">
+                <ul id="paginacion">
+                </ul>
+            </div>
+        </div>
+    </div>   
 </div>
-<!--</div>-->
+
+<div id="eliminarProveedor" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Eliminar Proveedor</h3>
+    </div>
+    <div class="modal-body">
+        <p>¿Desea Eliminar este Proveedor?</p>
+        </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+        <a id="aceptarEliminar" href="#" class="btn btn-primary">Aceptar</a>
+    </div>
+</div>
+
+
+
+<div id="editar" style="display:none">
+<div class="container">
+    <div class="bs-docs-example row">
+        <div class="descriptionForm">Editar->ProveedorNuevo</div>
+        <form id="form-editar" action="#" class="form-horizontal" method="POST">
+                <div class="control-group">
+                    <label for="nacionalidad" class="control-label">Rif</label>
+                    <div class="controls">
+                        <input name="rif" type="text" id="rif" value="<?php echo $this->proveedor['rif'] ?>">
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label for="nacionalidad" class="control-label">Razon Social</label>
+                    <div class="controls">
+                        <input name="razon_social" id="razon_social" type="text" value="<?php echo $this->proveedor['razon_social'] ?>" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="nacionalidad" class="control-label">Telefono</label>
+                    <div class="controls">
+                        <input type="text" name="telefono" id="telefono" value="<?php echo $this->proveedor['telefono'] ?>">
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label for="nacionalidad" class="control-label">Direccion</label>
+                    <div class="controls">
+                        <input type="text" name="direccion" id="direccion" value="<?php echo $this->proveedor['direccion'] ?>" >
+                    </div>
+
+                </div>
+
+
+                <div class="control-group">
+                    <label for="nacionalidad" class="control-label">Email</label>
+                    <div class="controls">
+                        <input type="text" name="email" id="email" value="<?php echo $this->proveedor['email'] ?>">
+                    </div>
+
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input class="btn btn-primary" type="submit" value="Actualizar" />
+                        <input id="atras" class="btn btn-primary" type="button" value="Atras" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
