@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php Session::init(); ?>
-
 <html content="text/html; charset=UTF-8">
 <head>
     <meta charset="utf-8">
@@ -126,66 +124,3 @@
     </div>
   </div>
   <div id="contentDATA" class="container">
-
-
-
-
-
-    
-    <!-- <div id="hld">
-        <div class="wrapper">
-            <div id="header">
-                <div class="hdrl"></div>
-                <div class="hdrr"></div>
-                <h1><a href="#">M & R Valle Hondo</a></h1>
-                <ul id="nav">
-                    <li class="">
-                        <a href="">Inicio</a>
-                        <ul>
-                            <li><a href="<?php echo URL; ?>">Inicio</a></li>
-                            <?php if(Session::get('rol') == 'administrador'){?>
-                            <li><a href="<?php echo URL; ?>usuario">Usuarios</a></li>
-                            <?php }?>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="">Configuracion</a>
-                        <ul>
-                            <li><?php if(Session::get('rol') == 'administrador'){?>
-                                <a href="<?php echo URL; ?>categoria">Definir Categorias</a></li>
-                            <li><a href="<?php echo URL; ?>marca">Definir Marcas</a></li>
-                            <li><a href="<?php echo URL; ?>muestra">Definir Cilindrada</a></li>
-                             <?php }?>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="">Datos</a>
-                        <ul>
-                            <li><a href="<?php echo URL; ?>cliente">Clientes</a></li>
-                            <li><a href="<?php echo URL; ?>proveedor">Proveedores</a></li>
-                            <li><a href="<?php echo URL; ?>producto">Productos</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="">
-                        <a href="">Reporte General</a>
-                        <ul>
-                            <li><a href="<?php echo URL ?>producto/imprimir/">Generar PDF</a></li>
-                            
-                        </ul>
-                    </li>
-
-                                                     
-                   
-                </ul>
-
-                <p class="user">Bienvenido, <a href="<?php echo URL; ?>usuario"><?php echo $this->usuario; ?></a> | <a href="<?php echo URL; ?>dashboard/logout">Salir</a></p>
-
-            </div>
-
-
-            <div class="block"> -->
-                                
-
-
-

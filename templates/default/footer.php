@@ -43,10 +43,3 @@
 </div>
 </body>
 </html>
-<!--</div>
-<div id="footer" class="bordes">
-    Footer
-</div>
-</div>
-</body>
-</html>-->
